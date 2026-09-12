@@ -80,8 +80,11 @@ Each stored fact gets an expiration date. User corrections are kept for 90 days 
 **Justification**
 
 Read — Auto: Very low blast radius. It only looks at information and does not change anything. Nothing to undo.
+
 Draft — Auto: Low blast radius. A bad draft is only a suggestion and can be edited or deleted before anyone acts on it.
+
 Write — Confirm: Medium blast radius. A bad roadmap update could affect the whole team and influence decisions. It can be undone, but someone may already have acted on the bad information.
+
 Send — Blocked: High blast radius. Customer-facing communication leaves the company and could affect customers or RocketShip’s reputation. It may be impossible to fully undo once sent.
 
 ## 06 Verification · AI Testing & Measurement
