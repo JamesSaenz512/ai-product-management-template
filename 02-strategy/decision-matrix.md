@@ -12,11 +12,11 @@ _____
 
 ## Options scored
 
-Options scored
-Option	Cost	Speed	Control	Moat	Risk	Score
-Build	1	1	5	5	2	2.8
-Buy / API	4	5	3	3	4	3.8
-Fine-tune	2	2	4	4	2	2.8
+| Option | Cost | Speed | Control | Moat | Risk | Score |
+|---|---|---|---|---|---|---|
+| Build | 1 | 1 | 5 | 5 | 2 | 2.8 |
+| Buy / API | 4 | 5 | 3 | 3 | 4 | 3.8 |
+| Fine-tune | 2 | 2 | 4 | 4 | 2 | 2.8 |
 
 
 ## Recommendation
