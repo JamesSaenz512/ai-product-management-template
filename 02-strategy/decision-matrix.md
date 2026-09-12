@@ -1,23 +1,26 @@
 # AI Solution Decision Matrix · Juno
 
-> Module 2 · Strategy. The build / buy / fine-tune / partner call, made with the **M2 · AI Solution Decision Matrix**. Paste the tool's markdown over this file.
+
 
 ## The decision
 
-_What are you deciding, and why now?_
+RocketShip has reached Signal Collapse and is no longer operating efficiently. P0 (critical) escalations are arriving faster than PMs can triage them, thousands of tickets are untouched, and roadmap decisions are stalling. At the same time, headcount is frozen, so RocketShip needs another way to increase PM capacity.
+Determine the best approach for powering Juno PM so RocketShip can deliver a trusted AI assistant that synthesizes signals, drafts specs, and recommends priorities.
+
 
 _____
 
 ## Options scored
 
-| Option | Cost | Speed | Control | Moat | Risk | Score |
-|---|---|---|---|---|---|---|
-| _Build_ | _…_ | _…_ | _…_ | _…_ | _…_ | _…_ |
-| _Buy / API_ | _…_ | _…_ | _…_ | _…_ | _…_ | _…_ |
-| _Fine-tune_ | _…_ | _…_ | _…_ | _…_ | _…_ | _…_ |
+Options scored
+Option	Cost	Speed	Control	Moat	Risk	Score
+Build	1	1	5	5	2	2.8
+Buy / API	4	5	3	3	4	3.8
+Fine-tune	2	2	4	4	2	2.8
+
 
 ## Recommendation
 
-_The chosen option and the business reason._
+Buy/API. RocketShip should use an existing LLM API as Juno’s foundation and invest its resources in the RAG, agentic workflows, integrations, and human-review controls that directly address Signal Collapse.
 
 _____
