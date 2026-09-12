@@ -1,27 +1,33 @@
-# AI Strategy One-Pager · Juno
+# AI Strategy One-Pager - Juno Automated Prioritization
 
-> Module 2 · Strategy. Built with the **M2 · AI Strategy One-Pager Builder** (informed by the Three-Layer Model Mapper). Paste the tool's markdown over this file.
+## 1. Problem & Workflow
 
-## The bet
+Juno prevents PMs from making reactive prioritization decisions based on stakeholder pressure rather than a complete view of urgency, customer impact, and risk. The squeakiest wheel gets the grease.
 
-_The one-sentence strategic bet._
+## 2. Target Metrics
 
-_____
+- Time to Prioritization: Average time from a P0 escalation being raised to a PM approving its priority. This measures whether Juno is unblocking decisions.
 
-## Three-layer model
+- PM override: How often PMs reject or substantially change Juno’s recommended priority. You want speed without bad recommendations.
 
-- **Model layer:** _which model(s), and why._
-- **Data / retrieval layer:** _what proprietary data or context creates advantage._
-- **Product layer:** _the experience users actually pay for._
+Time to Prioritization Decision
 
-## Why now
+## 3. Autonomy Level
 
-_Market timing + why this is defensible._
+Copilot. Juno performs the analysis and recommends actions, but the PMs retain approval authority. I would not choose Agent because prioritization decisions can affect customer commitments, roadmap direction, and engineering priorities, making full autonomy risky to implement.
 
-_____
+## 4. Data & Model Approach
 
-## Success metric
+Buy + Ground. We will use an existing LLM and ground it with RocketShip data through RAG. We are not taking the shortcut of fine-tuning a model and treating static training as a substitute for access to current operational signals.
 
-_The single number that says the bet paid off._
+## 5. Risks & Mitigations
 
-_____
+Risk: Juno making a bad prioritization call that changes a customer commitment or engineering priority before a human catches it. Once teams act on that decision, the damage can be hard to unwind and trust in Juno drops fast.
+
+Mitigation: Juno can recommend and draft, but it cannot change roadmap priorities, customer commitments, or engineering work without explicit PM approval.
+
+## 6. V1 Scope
+
+- Juno will not make final roadmap or prioritization decisions. It can recommend what should come first, but a PM has to approve the decision.
+
+- Juno will not make or change customer commitments. It cannot promise dates, scope, or delivery outcomes to customers or Sales on its own.
