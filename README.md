@@ -1,12 +1,12 @@
-# Juno PM
+# Juno PM - AI Copilot for Rocketship's Product Organization
 
-> _(one-line pitch: what Juno does, for whom, in one sentence)_
+> Juno is RocketShip’s AI Associate Product Manager, embedded in Slack, Notion, and Jira, whose single job is to turn overwhelming product signals into prioritized, actionable work so human PMs can make better decisions faster.Juno is RocketShip’s AI Associate Product Manager, embedded in Slack, Notion, and Jira, whose single job is to turn overwhelming product signals into prioritized, actionable work so human PMs can make better decisions faster.
 
-_Your name · cohort · date_
+_James Saenz_
 
-This repo is my final project for the **AI Product Management Certification**. Each module's artefact lives in its own folder; this README is the dashboard and the pitch.
+Repo: https://github.com/JamesSaenz512/ai-product-management-template
 
-**How to use this template:** click **Use this template → Create a new repository**, name it `juno-pm`, and commit one module's artefact per session. Assemble this dashboard with the **Final Project Deliverables Builder** (paste its `README.md` output over this file).
+This repo is my final project for the AI Product Management Certification — **Juno PM - AI Copilot for Rocketship's Product Organization**. Each module’s artefact lives in its own folder; this README is the dashboard and the pitch.
 
 ---
 
@@ -14,7 +14,7 @@ This repo is my final project for the **AI Product Management Certification**. E
 
 ### M1 · Prompting
 - **System prompt** — [`01-prompting/system-prompt.md`](01-prompting/system-prompt.md)
-- **Lovable prototype** — [`01-prompting/lovable-prototype.md`] (01-prompting/lovable-prototype.md)
+- **Prototype** — https://juno-pm-dashboard--jbsaenz512.replit.app/
 
 ### M2 · Strategy
 - **Decision matrix** — [`02-strategy/decision-matrix.md`](02-strategy/decision-matrix.md)
@@ -31,7 +31,7 @@ This repo is my final project for the **AI Product Management Certification**. E
 - **Agent Workflow Spec (AWSpec)** — [`05-agentic-workflows/awspec.md`](05-agentic-workflows/awspec.md)
 - **Agent Control Panel** — [`05-agentic-workflows/agent-control-panel.md`](05-agentic-workflows/agent-control-panel.md)
 
-### M6 · Evals & Guardrails
+### M6 · Evals &amp; Guardrails
 - **Eval stack** — [`06-evals/eval-stack.md`](06-evals/eval-stack.md)
 - **Human evaluation rubric** — [`06-evals/human-rubric.md`](06-evals/human-rubric.md)
 
@@ -40,53 +40,38 @@ This repo is my final project for the **AI Product Management Certification**. E
 ## PM Execution Plan
 
 ### Where Juno is today
-_____
+- Juno is fully designed across the six course modules. 
+- The prompt, strategy, harness, UX, agent workflow, human rubric, and eval stack are all defined. 
+- The product is still at the prototype/spec stage, so the next step is turning those decisions into a working, testable system.
 
 ### What ships next (next 2 sprints)
-_____
+- Sprint 1: Build out the working Juno flow using the Slack, Jira, support, and strategy connections we already defined. Add the permissions, handoff rules, verification checks, and eval logging from the harness and AWSpec.
+- Sprint 2: Run Juno on real or realistic P0 triage cases with a PM in the loop. Start collecting user feedback, human rubric scores, and automated eval results, then use those results to tighten the model, data, or architecture before expanding use.
 
 ### What I watch (dashboards)
-_____
+- Daily: positive/negative feedback, edits or overrides, abandoned recommendations, handoffs, and response time.
+- Weekly: human rubric average, citation problems, safety/refusal issues, and repeated user complaints.
+- Per release: golden-set accuracy, citation pass rate, safety pass rate, and whether any hard gate failed.
 
-### Red lines (what blocks shipping — numbers, not feelings)
-_____
+### Red lines (what blocks shipping)
+- Any PII leak blocks the release.
+- Any serious safety or refusal failure blocks the release.
+- Any missing, fabricated, or wrong citation blocks the release.
+- Golden-set accuracy below 90% blocks the release.
 
 ### Governance
-_Compliance · Safety · Reliability · Reputation._
+- Compliance: Keep sensitive or regulated information inside approved systems and escalate anything that needs legal or policy review.
+- Safety: Protect PII, block unsafe behavior, and hand risky decisions back to a person.
+- Reliability: Juno should fail clearly when a source or tool is unavailable instead of guessing, and it should stay within the accuracy and citation bars we set.
+- Reputation: Juno should never make up risks, customer details, or evidence. If the answer is uncertain, it should say so instead of sounding more confident than the evidence supports.
 
 ---
 
 ## Build Insights
 
-- **Friction point.** _____
-- **Key learning.** _____
-- **Aha moment.** _____
-
----
-
-## Repo structure
-
-```
-juno-pm/
-├── README.md                          ← this dashboard + pitch
-├── 01-prompting/
-│   ├── system-prompt.md               ← M1: Juno's system prompt
-│   └── lovable-prototype.md           ← M1: prototype link + debrief
-├── 02-strategy/
-│   ├── decision-matrix.md             ← M2: build / buy / fine-tune / partner call
-│   └── strategy-one-pager.md          ← M2: AI strategy one-pager
-├── 03-rag-prd/
-│   └── prd.md                         ← M3: AI PRD with retrieval requirements
-├── 04-ai-ux/
-│   ├── user-flow.md                   ← M4: AI-native user flow
-│   └── trust-gaps.md                  ← M4: trust-gap mitigations
-├── 05-agentic-workflows/
-│   ├── awspec.md                      ← M5: Agent Workflow Spec
-│   └── agent-control-panel.md         ← M5: Agent Control Panel
-└── 06-evals/
-    ├── eval-stack.md                  ← M6: layered eval stack
-    └── human-rubric.md                ← M6: human evaluation rubric
-```
+- **Friction point.** Keeping all the pieces consistent as Juno got more detailed was harder than I expected. A decision about tools, memory, confidence, or human handoff in one module could affect several other parts of the product.
+- **Key learning.** AI needs a much more complete product spec than a normal feature. It is not enough to say what Juno should do; I also have to define what it can see, what it can change, when it stops, when a human takes over, and how I will know if it is doing a good job.
+- **Aha moment.** The biggest aha for me was that the model is only one part of the product. Most of the trust in Juno comes from the rules around it — the data it uses, the tools it can access, the guardrails, human checkpoints, and the evals that prove it is working.
 
 ---
 
