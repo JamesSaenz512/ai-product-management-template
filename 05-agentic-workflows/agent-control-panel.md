@@ -8,29 +8,29 @@ Juno can research the issue, recommend a priority, and prepare a risk summary or
 
 ## Controls
 
-- **Kill switch:** Juno should stop after 10 steps. 
-If the same tool fails twice, stop trying and hand it back to the PM. 
-If the whole task takes more than 30 seconds, stop.
-- **Rate / cost caps:** - Each tool should return a clear result Juno can actually use. 
-- Slack should return the thread and message details.
-- Jira should return related issues and status, support should return related tickets and customer impact.
-strategy should return the relevant company priority and source. 
-- If nothing is found, say that clearly; no guessing.
+- **Kill switch:** Juno stops after 5 steps. 
+If the same tool fails twice, stop and hand it back to the PM. 
+If it can’t get enough reliable information to make a recommendation, stop and ask for human input.
+Max 10,000 tokens per run and 20 runs per user per hour. Stop when the limit is reached.
+- **Rate / cost caps:** Each tool should return the relevant information, the source it came from, when it was last updated, and a confidence score from 0–100%.
+Slack returns relevant messages and context
+Jira returns issue details and dependencies
+Notion returns related specs and decisions.
 - **Escalate-on-stuck:** If Juno can’t reach a source, gets conflicting information, or the same tool fails twice, stop and hand it back to the PM. Mark the recommendation incomplete or unverified instead of guessing.
 
 ## Monitoring
 
 **Confidence thresholds (map to actions):**
 
-If Juno is 70% confident or higher, it can show the recommendation to the PM. If it is below 70%, flag it for PM review instead of acting like the answer is solid.
+If Juno is 70% confident or higher, it can show its recommendation to the PM. If it is below 70%, flag the result as uncertain and send it to the PM for review instead of presenting it as a clear recommendation.
 
 **Checkpoints:**
 
-PM review is required if confidence is below 70% or if Juno is about to make a change or send something. The PM makes the final call on anything with real impact.
+PM review is required if confidence is below 70%, the information doesn’t line up, or Juno is about to make a change or send something. The PM makes the final call on anything with real impact.
 
 **North Star (re-read every loop):**
 
-Juno’s job is to find and prioritize the P0 risks that matter most, provide evidence, and help the PM make a faster decision. Don’t guess and prompt user when human input is needed.
+Juno’s job is to find and prioritize the P0 risks that matter most, show the evidence behind the recommendation, and help the PM make a faster decision. Don’t guess, don’t make the final decision, and ask for human input when needed.
 
 ## Permissions
 
