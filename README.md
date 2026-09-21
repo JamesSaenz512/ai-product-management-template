@@ -1,8 +1,8 @@
 # Juno PM - AI Copilot for Rocketship's Product Organization
 
-> Juno is RocketShip’s AI Associate Product Manager, embedded in Slack, Notion, and Jira, whose single job is to turn overwhelming product signals into prioritized, actionable work so human PMs can make better decisions faster.Juno is RocketShip’s AI Associate Product Manager, embedded in Slack, Notion, and Jira, whose single job is to turn overwhelming product signals into prioritized, actionable work so human PMs can make better decisions faster.
+> Juno is RocketShip’s AI Associate Product Manager, embedded in Slack, Notion, and Jira, whose single job is to turn overwhelming product signals into prioritized, actionable work so human PMs can make better decisions faster.
 
-_James Saenz_
+_James Saenz · AI PM Cohort · September 2026_
 
 Repo: https://github.com/JamesSaenz512/ai-product-management-template
 
